@@ -75,8 +75,13 @@ public class Main {
 		while (flag) {
 			try {
 				choice = scan.nextInt();
-
+				
+				if (choice>0){
 				flag = false;
+				}else
+				{
+				System.out.print("Enter a Positive Number :");
+				}
 			} catch (InputMismatchException e) {
 				System.out.print("Input a number :");
 				scan.nextLine();
