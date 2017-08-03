@@ -1,0 +1,215 @@
+* { 
+	margin: 0px;
+	font-family: sans-serif;
+	font-weight: normal;
+}
+
+p{
+	line-height: 2;
+}
+
+
+.nav a {
+	text-decoration: none;
+	color: #6FBEF3;
+	margin: 10px;
+}
+
+.yoursite a {
+	margin:25px;
+	float: left;
+	text-decoration: none;
+	
+	font-size: 20px;
+	color:white;
+}
+div.header {
+	position: fixed;
+	width: 100%;
+	background-color: #2d3e50;
+	height: 9%;
+
+}
+div.nav {
+	float: right;
+	margin-top: 20px; 
+}
+
+div.main {
+    background-color: #1f8dd6;
+    color: white;
+    text-align: center;
+    width:100%;
+    height:70%;
+}
+
+div.main-container {
+
+padding-top: 200px;
+}
+
+div.boldtext {
+    border: 3px solid white;
+    width: 50%;
+    border-radius:5px;
+    text-align: center;
+}
+
+div.boldtext h1 {
+    font-size: 50px;
+    margin: 40px;
+}
+.getstarted,.getstarted a {
+	width: 18%;
+	background-color:white;
+	color:#1f8dd6;
+	border-radius: 5px;
+	height: 40px;
+	text-decoration: none;
+}
+
+.getstarted h3 {
+	padding-top: 10px;
+
+}
+
+.moto h3 {
+	margin: 30px;
+	font-size: 18px;
+	text-transform: uppercase;
+	opacity: 0.5;
+}
+
+.heading {
+	margin: 40px;
+	text-align: center;
+	opacity: 0.7;
+	text-transform: uppercase;
+}
+
+.sub-container {
+	display: flex;
+
+}
+.column {
+	display: inline-block;
+	flex:1;
+	margin:30px;
+	color: #808080;
+}
+.column h2 {
+	font-weight: bold;
+	color: #1f8dd6;
+	font-size: 20px;
+
+}
+img {
+	margin-right:10px;
+}
+
+.option {
+	height: 300px;
+}
+
+.text {
+	margin-top: 20px;
+}
+
+.forth-div {
+	background-color: #2d3e50;
+	height: 28%;
+	padding: 60px;
+}
+
+.forth-div img{
+	float: left;
+	margin-left: 100px;
+}
+
+.forth-div h2{
+	color: white;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+
+}
+
+.forth-div p{
+	color: white;
+	opacity: 0.5;
+}
+.forth-div .container{
+	margin-left: 500px;
+	margin-top: 40px;
+}
+
+.fifth-div{
+		height: 50%;
+}
+
+.fifth-div h1{
+	margin:50px;
+	text-align: center;
+	color: #2d3e50;
+	text-transform: uppercase;
+	font-size: 25px;
+
+}
+
+.fifth-div h4{
+	font-weight: bold;
+	color: #2d3e50;
+
+}
+
+
+.contact h4{
+	margin:30px;
+}
+
+.contact p{
+	width: 90%;
+}
+
+.contact {
+	color:#808080
+}
+
+
+.form{
+	float: left;
+	width: 40%;
+	margin-right: 30px;
+	margin-left: 40px;
+}
+
+.form input{
+	width: 80%;
+	margin-top:10px;
+	margin-bottom:10px;
+	height: 20px;
+	border:2px solid #D3D3D3;
+	font-size: 100%;
+	display: inline;
+	padding: 20px;
+	border-radius: 10px;
+}
+.contact{
+	display: inline;
+	width: 0%;
+}
+button{
+	background-color: #1f8dd6;
+	color: white;
+	border-radius: 5px;
+	font-size: 18px;
+	width: 120px;
+	height: 40px;
+}
+
+.footer{
+	background-color: black;
+	color: #808080;
+	text-align: center;
+	height: 7%;
+	padding-top:1%;
+}
