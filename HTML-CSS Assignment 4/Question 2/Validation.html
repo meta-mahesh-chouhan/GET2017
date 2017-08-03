@@ -1,0 +1,239 @@
+<html>
+	<head>
+		<title>
+			Form Validation
+		</title>
+
+		<style type="text/css">
+		
+		* {
+		 margin:0px;
+		 font-family: sans-serif;
+		}
+		
+		body{
+			background-color:#e6e6e6;
+		}
+		h3{
+			border-bottom: 1px solid #b3b3b3;
+			padding: 30px;
+			font-size: 30px;
+			color: #595959;
+		}
+		
+
+		.input-container{
+			display: block;
+			text-align: center;
+			margin-left:200px;
+			margin-right:200px;
+
+		}
+
+		.input-container div{ 
+			width: 60%;
+			margin: 10px;
+
+		}
+
+		.containter{
+			display: flex;
+
+		}
+
+		.input{
+			display: flex;
+			border:1px solid #b3b3b3;
+			flex:1;
+			border-radius: 5px;
+
+
+		}
+		.lable{
+			padding-top: 15px;
+			width:40%;
+			text-align: right;
+			font-weight: bold;
+			font-size: 20px;
+			color: #595959;
+		}
+
+		i{
+			height:20px;
+			width: 40px;
+			border-radius: 6px;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			}
+
+		input{
+		border:0px;
+		width: 100%;
+		border-right:1px solid #b3b3b3;
+		border-top:1px solid #b3b3b3;
+		border-bottom:1px solid #b3b3b3;
+		}
+
+	
+		textarea {
+			resize: vertical;
+		}
+
+		button{
+			border-radius: 5px;
+			border:1px solid #ffcc80;
+			background-color: #ff9900;
+			font-weight: bold;
+			color: white;
+		}
+		</style>
+
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	</head>
+
+	<body>
+		<div class="main">
+			<h3>Contact Us Today!</h3>
+			<form>
+				<div class="input-container">
+
+					<div class="containter">
+						<div class="lable"><label>First Name</label></div>
+						<div class="input">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<input type="text" placeholder="First Name" name="first-name" pattern="[a-zA-Z]+" required autocomplete="off">
+						</div>
+					</div>
+
+
+					<div class="containter">
+					<div class="lable"><label>Last Name</label></div>
+						<div class="input">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<input type="text" placeholder="Last Name" name="last-name" pattern="[a-zA-Z]+" required>
+						</div>
+					</div>
+
+					<div class="containter">
+					<div class="lable"><label>E-mail</label></div>
+						<div class="input">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<input type="email" placeholder="E-Mail Address" name="email" required>
+						</div>
+					</div>
+
+					<div class="containter">
+						<div class="lable"><label>Phone</label></div>
+						<div class="input">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+							<input type="text" placeholder="(845)555-1212" pattern="[0-9]{6,12}" required>
+						</div>
+					</div>
+
+
+					<div class="containter">
+					<div class="lable"><label>Address</label></div>
+						<div class="input">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<input type="text" placeholder="Address" name="address" required>
+						</div>
+					</div>
+
+
+					<div class="containter">
+					<div class="lable"><label>City</label></div>
+						<div class="input">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<input type="text" placeholder="City" name="city" pattern="[a-zA-Z]+" required>
+						</div>
+					</div>
+
+					<div class="containter">
+					<div class="lable"><label>State</label></div>
+						<div class="input">
+							<i class="fa fa-list" aria-hidden="true"></i>
+								<select name=slist>
+									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+									<option value="Andhra Pradesh">Andhra Pradesh</option>
+									<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+									<option value="Assam">Assam</option>
+									<option value="Bihar">Bihar</option>
+									<option value="Chandigarh">Chandigarh</option>
+									<option value="Chhattisgarh">Chhattisgarh</option>
+									<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+									<option value="Daman and Diu">Daman and Diu</option>
+									<option value="Delhi">Delhi</option>
+									<option value="Goa">Goa</option>
+									<option value="Gujarat">Gujarat</option>
+									<option value="Haryana">Haryana</option>
+									<option value="Himachal Pradesh">Himachal Pradesh</option>
+									<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+									<option value="Jharkhand">Jharkhand</option>
+									<option value="Karnataka">Karnataka</option>
+									<option value="Kerala">Kerala</option>
+									<option value="Lakshadweep">Lakshadweep</option>
+									<option value="Madhya Pradesh">Madhya Pradesh</option>
+									<option value="Maharashtra">Maharashtra</option>
+									<option value="Manipur">Manipur</option>
+									<option value="Meghalaya">Meghalaya</option>
+									<option value="Mizoram">Mizoram</option>
+									<option value="Nagaland">Nagaland</option>
+									<option value="Orissa">Orissa</option>
+									<option value="Pondicherry">Pondicherry</option>
+									<option value="Punjab">Punjab</option>
+									<option value="Rajasthan">Rajasthan</option>
+									<option value="Sikkim">Sikkim</option>
+									<option value="Tamil Nadu">Tamil Nadu</option>
+									<option value="Tripura">Tripura</option>
+									<option value="Uttaranchal">Uttaranchal</option>
+									<option value="Uttar Pradesh">Uttar Pradesh</option>
+									<option value="West Bengal">West Bengal</option>
+								</select>
+						</div>
+					</div>
+
+					<div class="containter">
+						<div class="lable"><label>Zip Code</label></div>
+						<div class="input">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<input type="text" placeholder="Zip Code" name="zipcode" pattern="[0-9]{6}" required>
+						</div>
+					</div>
+
+					<div class="containter">
+					<div class="lable"><label>Website or Domain Name</label></div>
+						<div class="input"> 
+							<i class="fa fa-globe" aria-hidden="true"></i>
+							<input type="url" name="first-name" required>
+						</div>
+					</div>
+
+					<div class="containter">
+					<div class="lable"><label>Do you have Hosting?</label></div>
+						<div class="input"> 
+							<div><input type="radio" name="domain">Yes</div>
+							<div><input type="radio" name="domain">No</div>
+						</div>
+					</div>
+
+
+					<div class="containter">
+					<div class="lable"><label>Project Description</label></div>
+						<div class="input"> 
+							<i class="fa fa-pencil" aria-hidden="true"></i>
+							<textarea rows="3" style="width:100%"></textarea> 
+						</div>
+					</div>
+
+
+
+					<button type="submit">Send<i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+
+				</div>
+				
+			</form>
+		</div>
+	</body>
+
+</html>
