@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Location Assignment
+		</title>
+		
+		<style type="text/css">
+			body{
+				background-color: #0080ff;
+				font-family: sans-serif;
+				color: white;
+			}
+
+			div{
+				width: 60%;
+				margin-left: 20%;
+				margin-right: 20%;
+				text-align: center;
+				padding-top: 100px;
+			}
+
+			button{
+				background-color: #004d99;
+				color: white;
+				font-size: 30px;
+				border:2px solid #0066cc;
+				border-radius:10px;
+				padding:10px;
+				width: 40%;
+			}
+
+			button:hover{
+				cursor: pointer;
+				background-color:#003366; 
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+		<h1 id="display">Your Location</h1>
+		<button onclick="getLocation()">Get Location</button>
+		</div>
+
+
+		<script>
+				
+			var x = document.getElementById("display");			
+
+			function getLocation() {
+		
+			    if (navigator.geolocation) {
+			        navigator.geolocation.getCurrentPosition(showLocation);
+			    } else { 
+			        x.innerHTML = "Geolocation is not supported by this browser.";
+			    }
+			}
+
+			function showLocation(position) {
+			    x.innerHTML = "Latitude: " + position.coords.latitude + 
+			    "<br>Longitude: " + position.coords.longitude;
+				}
+		</script>
+	</body>
+</html>
