@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>
+			Index
+		</title>
+
+		<style type="text/css">
+			body{
+				background-color: #0080ff;
+				font-family: sans-serif;
+
+				color: white;
+			}
+
+			div{
+				width: 60%;
+				margin-left: 20%;
+				margin-right: 20%;
+				text-align: center;
+				padding-top: 100px;
+			}
+
+			input{
+				padding: 10px;
+				border: 1px solid #0066cc;
+				border-radius: 4px;
+				margin:20px;
+			}
+
+			h1{
+				font-size: 60px;
+			}
+
+			button{
+				background-color: #004d99;
+				color: white;
+				font-size: 30px;
+				border:2px solid #0066cc;
+				border-radius:10px;
+				padding:10px;
+				width: 40%;
+			}
+
+			button:hover{
+				cursor: pointer;
+				background-color:#003366; 
+			}
+		</style>
+		<script>
+			function getStore() {
+				var msg=document.getElementById("msg");
+				msg.innerHTML=localStorage.getItem("key1");
+			}
+
+			function saveToStore(){
+				var textbox=document.getElementById("textbox");
+				localStorage.setItem("key1",textbox.value);
+				textbox.value="";
+
+			}
+
+		</script>
+	</head>
+	<body>
+
+		<div>
+			<h1 id="msg">Hello World!</h1>
+			<input type="text" placeholder="enter some text" id="textbox"><br/>
+			<button onclick="saveToStore()">Save To Store</button><br/><br/>
+			<button onclick="getStore()">Get Local Storage</button><br/><br/>
+		</div>
+	</body>
+</html>
