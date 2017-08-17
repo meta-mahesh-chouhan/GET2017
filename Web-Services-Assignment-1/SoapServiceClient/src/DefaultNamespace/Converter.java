@@ -19,14 +19,14 @@ public class Converter {
 	 * @return Temperature in Celsius
 	 */
 	public Double convert(double temperture) {
-		Double ans = null;
+		Double result = null;
 		WsServerServiceLocator wsServerServiceLocator = new WsServerServiceLocator();
 		wsServerServiceLocator.setWsServerEndpointAddress("http://localhost:8080/SoapService/services/WsServer");
 
-		WsServer obj;
+		WsServer wsServer;
 		try {
-			obj = wsServerServiceLocator.getWsServer();
-			ans = obj.convertFahrenheitToCelsius(temperture);
+			wsServer = wsServerServiceLocator.getWsServer();
+			result = wsServer.convertFahrenheitToCelsius(temperture);
 
 		} catch (ServiceException e) {
 			e.printStackTrace();
@@ -36,7 +36,7 @@ public class Converter {
 			e.printStackTrace();
 		}
 
-		return ans;
+		return result;
 	}
 
 }
