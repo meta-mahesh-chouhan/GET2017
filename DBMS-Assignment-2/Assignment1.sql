@@ -41,7 +41,7 @@ GROUP BY category;
 
 /*
 to display name of those members who belongs to the
-category as to which member "Udit Saxena" belongs.
+category as to which member "Keshav Sharma" belongs.
 Solve the problem using join operation
 */
 SELECT b.member_name 
