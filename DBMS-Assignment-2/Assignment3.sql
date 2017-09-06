@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS category(
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(20) NOT NULL,
     parent_id INT NULL,
-    FOREIGN KEY(parent_id) REFERENCES category(id) 
+    CONSTRAINT category_parent_idfk FOREIGN KEY(parent_id) REFERENCES category(id) 
 );
 
 ALTER TABLE category AUTO_INCREMENT = 1001;
@@ -62,7 +62,7 @@ FROM category a LEFT JOIN category b
 ON a.parent_id = b.id;
 
 # Display all categories with parent category (not displaying null)
-SELECT a.name as name, IFNULL(b.name,"Top Category") as parent_name 
+SELECT a.name as name, IFNULL(b.name, "Top Category") as parent_name 
 FROM category a LEFT JOIN category b
 ON a.parent_id = b.id
 ORDER BY parent_name;
