@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS city (
     city_name VARCHAR(20) NOT NULL,
     zipcode INT NOT NULL,
     state_id INT NOT NULL ,
-    FOREIGN KEY (state_id) REFERENCES state(state_id)
+    CONSTRAINT cityfk FOREIGN KEY (state_id) REFERENCES state(state_id)
 );
 
 ALTER TABLE city AUTO_INCREMENT = 100;
