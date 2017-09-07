@@ -17,4 +17,4 @@ WHERE members.category != "F";
 
 # Information of authors for which more than one book is purchased
 SELECT title_author.author_id, author_name
-FROM authors JOIN title_author ON authors.author_id = title_author.author_id; 
+FROM (authors JOIN title_author ON authors.author_id = title_author.author_id ) JOIN book ON title_author.title_id = book.title_id; 
