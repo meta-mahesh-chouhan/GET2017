@@ -13,8 +13,13 @@ HAVING COUNT(book_issue.accession_no) > 2;
 # Information of books issued for category other than Faculty
 SELECT book.accession_no, titles.title_name
 FROM (((book_issue JOIN book ON book_issue.accession_no = book.accession_no) JOIN titles ON titles.title_id = book.title_id) JOIN members ON book_issue.member_id = members.member_id)
-WHERE members.category != "F";
+WHERE book.accession_no NOT IN (
+                            SELECT accession_no
+                            FROM book_issue JOIN members ON book_issue.member_id = members.member_id
+                            WHERE members.category = "F" );
 
 # Information of authors for which more than one book is purchased
 SELECT title_author.author_id, author_name
-FROM authors JOIN title_author ON authors.author_id = title_author.author_id; 
+FROM (authors JOIN title_author ON authors.author_id = title_author.author_id ) JOIN book ON title_author.title_id = book.title_id
+GROUP BY accession_no
+HAVING COUNT(accession_no) > 1;
