@@ -6,7 +6,8 @@ GROUP BY subject_name;
 # Display information of books issued for more than 2 months 
 SELECT book_issue.accession_no, title_name
 FROM (book_issue JOIN book ON book_issue.accession_no = book.accession_no) JOIN titles ON book.title_id = titles.title_id 
-WHERE TIMESTAMPDIFF(MONTH, issue_date, due_date ) > 2;
+WHERE TIMESTAMPDIFF(MONTH, book_issue.issue_date, return_date ) > 2 OR TIMESTAMPDIFF(MONTH, book_issue.issue_date, now() ) > 2;
+
 
 # List of books having price greater than minimum price
 
