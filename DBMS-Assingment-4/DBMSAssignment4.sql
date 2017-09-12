@@ -3,7 +3,7 @@
     Note: Solve the problem using subquery. */
 SELECT member_name
 FROM members
-WHERE member_name != "Jon Snow" AND members.category = ( 
+WHERE member_name != "Jon Snow" AND members.category IN ( 
                                                     SELECT category 
                                                     FROM members 
                                                     WHERE member_name = "Jon Snow" ) ;
