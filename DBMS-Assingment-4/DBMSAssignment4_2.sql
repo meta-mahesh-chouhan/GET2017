@@ -37,7 +37,7 @@ FROM book_issue bi
 JOIN book USING(accession_no) 
 JOIN titles USING(title_id)
 JOIN subjects USING(subject_id)
-JOIN book_return br ON bi.accession_no = br.accession_no AND bi.member_id = br.member_id
+JOIN book_return br ON bi.accession_no = br.accession_no AND bi.member_id = br.member_id AND bi.issue_date = br.issue_date
 JOIN members md ON bi.member_id = md.member_id;
 
 SELECT * FROM subject_details;
