@@ -12,10 +12,12 @@ WHERE member_name != "Jon Snow" AND members.category IN (
     that have not been returned till date. The information should
     include book issue date, title, member name and due date.
     Note: Use Correlated Subquery. */
-SELECT bi.issue_date, title_name, member_name, bi.due_date
-FROM book_issue bi JOIN members USING(member_id) JOIN book USING(accession_no) JOIN titles ON book.title_id = titles.title_id 
-WHERE EXISTS ( SELECT member_id, accession_no
-                FROM book_return br WHERE return_date IS NULL AND bi.accession_no = br.accession_no AND bi.member_id = br.member_id);
+SELECT *
+FROM book_issue bi JOIN members USING(member_id) JOIN book USING(accession_no) JOIN titles USING(title_id) 
+WHERE NOT EXISTS ( SELECT accession_no
+               FROM book_return br 
+               WHERE bi.accession_no = br.accession_no AND bi.member_id = br.member_id 
+               AND bi.issue_date = br.issue_date);
 
 
 
