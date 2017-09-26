@@ -1,0 +1,26 @@
+<h2 class="container-fluid">{{title}}</h2>
+
+<div class="container">
+    <div class="panel panel-success">
+        <div class="panel-heading"> Add New Products</div>
+        <div class="panel-body">
+            <label>Product Id </label> <input #productId>
+            <label>Product Name </label> <input #productName>
+            <label>Price </label> <input #price>
+            <button (click) ="createProduct(productId.value, productName.value, price.value);">Add</button>
+        </div>
+    </div>
+    <table class="table table-striped">
+            <tr *ngFor = "let product of products" >
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td> <button (click) = "onSelect(product);editDetails()" [class.selected]="product === selectedProduct" class="btn btn-info">
+                <span class="glyphicon glyphicon-edit"></span> Edit
+            </button></td>
+            <td> <button (click) = "deleteProduct(product)" [class.selected]="product === selectedProduct" class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash"></span> Delete
+            </button></td>
+            </tr>
+    </table>
+</div>

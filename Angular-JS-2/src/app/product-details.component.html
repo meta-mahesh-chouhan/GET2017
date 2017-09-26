@@ -1,0 +1,11 @@
+<h2>{{title}}</h2>
+<div class="panel panel-success">
+    <div class="panel-heading">Edit Details</div>
+    <div class="panel-body">
+        <p><label>Product Id</label><input [(ngModel)]="product.id" placeholder="id" /></p>
+        <p><label>Product Name</label><input [(ngModel)]="product.name" placeholder="name" /></p>
+        <p><label>Product Price</label><input [(ngModel)]="product.price" placeholder="price" /></p>
+        <button (click) ="save()">Save</button>
+        <button (click) ="goBack()">Back</button>
+    </div>
+</div>

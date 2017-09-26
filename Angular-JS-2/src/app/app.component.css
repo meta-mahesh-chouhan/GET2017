@@ -1,0 +1,27 @@
+
+h1 {
+    color: white;
+    font-weight: bold;
+    margin : 0px;
+    font-size: 30px;
+    font-family : sans-serif;
+    float : left;
+}
+
+nav {
+    border:none;
+    border-radius: 0px;
+    background-color: #3399ff;
+    color : white;
+}
+
+.navbar-default .navbar-nav>li>a {
+     color: white;
+     padding : 30px;
+     font-weight: bold;
+     font-size: 20px;
+}
+
+search{
+    color : black;
+}
