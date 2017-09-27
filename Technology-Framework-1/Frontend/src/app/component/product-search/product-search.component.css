@@ -1,0 +1,24 @@
+.search-result{
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    width:195px;
+
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .search-result:hover {
+    color: white;
+    background-color: #607D8B;
+  }
+  
+ input {
+     margin : 30px;
+     width : 195px;
+     border-radius : 20px;
+     padding : 4px;
+     border : none;
+ }
+

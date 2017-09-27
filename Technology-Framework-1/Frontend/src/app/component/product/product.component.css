@@ -1,0 +1,24 @@
+h2 {
+    text-align : center;
+}
+
+.panel-heading {
+    background-color: #222222;
+    color : rgb(255, 255, 255);
+    font-weight: bolder;
+    border-radius : 10px 10px 0px 0px;
+
+}
+.panel {
+    border: none;
+    border-radius: 10px;
+    margin:20px 10px 20px 10px;
+}
+
+.panel-body {
+    text-align : center;
+}
+
+.container {
+    padding: 0px;
+}
