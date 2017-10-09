@@ -1,8 +1,0 @@
-<span  id="search-component">
-        <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
-        <span style="position:absolute ; top:56px ;left:30px; z-index: 10;">
-          <div class="options"*ngFor="let product of products | async" (click)="gotoDetail(product)" class="search-result" >
-            {{product.name}}
-          </div>
-        </span>
-</span>
