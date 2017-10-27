@@ -1,0 +1,27 @@
+<my-app></my-app>
+<div class="container">
+  <br><br>
+  <div >
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3>Order Details</h3>
+      </div>
+      <div class="panel-body">
+          <ul>
+          <li *ngFor="let order of orderDetail">
+          
+        
+       
+          <label>Product Name : </label> {{order.pname}}
+       
+          <label>Price : </label> INR. {{order.price}}
+        
+      </li>
+    </ul>
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-warning" (click)="goBack()">Back</button>
+      </div>
+    </div>
+  </div>
+</div>

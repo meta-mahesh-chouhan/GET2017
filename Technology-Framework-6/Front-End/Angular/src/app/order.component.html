@@ -1,0 +1,31 @@
+<div class="container">
+   
+      
+    <div class="table-responsive text-center">
+  
+      <table class="table table-hover table-striped table-bordered">
+  
+        <thead>
+          <tr>
+            <th class=" text-center">Order ID</th>
+            <th class=" text-center">DOP</th>
+            
+            
+          </tr>
+        </thead>
+  
+  
+        <tbody>
+          <tr *ngFor="let cart of order">
+            <td>{{cart.orderId}}</td>
+            <td>{{cart.dop}}</td>
+            <td>
+              <button class="btn btn-info btn-sm " (click)="goToDetail(cart.orderId)">
+                          <span class="glyphicon glyphicon-list-alt"></span> View Order</button>
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
