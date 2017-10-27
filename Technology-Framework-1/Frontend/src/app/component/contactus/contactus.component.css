@@ -1,0 +1,19 @@
+
+h2 {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.panel-heading {
+    background-color: #222222;
+    color : rgb(255, 255, 255);
+    font-weight: bolder;
+    border-radius : 10px 10px 0px 0px;
+
+}
+.panel {
+    border: none;
+    border-radius: 10px;
+    margin-top : 20px;
+    margin-bottom: 20px;
+}
